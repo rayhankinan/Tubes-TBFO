@@ -141,7 +141,7 @@ def create_token(sentence):
 
     terminal = ""
     for i in tokenArray:
-        terminal += str(token) + " "
+        terminal += str(i) + " "
 
     return terminal
 
