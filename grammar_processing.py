@@ -1,6 +1,6 @@
 # ATURAN MENULIS GRAMMAR:
 # Head pertama akan menjadi Start Symbol
-# Variables ditulis huruf uppercase atau angka semua (untuk precaution juga jangan pake nama "START", "X", "Y", "Z"), sedangkan Terminal harus mengandung huruf lowercase
+# Variables ditulis dengan huruf awal uppercase (untuk precaution juga jangan pake nama "START", "X", "Y", "Z"), sedangkan Terminal harus ditulis huruf awal lowercase
 # Variables yang ditulis pada txt tidak boleh mengandung angka
 # Tidak mengandung Useless Production (tidak terdapat Variables yang tidak dapat diderivasi menjadi string dan tidak terdapat Productions yang tidak muncul pada derivasi string)
 # Tidak mengandung Null Production (tidak terdapat Variables yang menghasilkan epsilon, kecuali pada Start Symbol)
@@ -25,7 +25,7 @@ def read_grammar(nama_file):
     return cfg
 
 def is_variables(string):
-    return all([char.isupper() or char.isnumeric() for char in string])
+    return string[0].isupper()
 
 def is_terminal(string):
-    return any([char.islower() for char in string])
+    return not is_variables(string)
