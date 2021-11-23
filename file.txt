@@ -1,3 +1,0 @@
-for i in range(A):
-    if a>10:
-        return a
