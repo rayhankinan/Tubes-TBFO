@@ -1,3 +1,6 @@
-X == 1
-X == 2
-X == 3
+if X > 0:
+    print("TES")
+elif X < 0:
+    print("TIS")
+else:
+    print("TOS")

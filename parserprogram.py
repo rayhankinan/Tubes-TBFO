@@ -10,13 +10,24 @@ if __name__ == "__main__":
 
     args = argument_parser.parse_args()
 
-    # print(create_token(args.nama_file))
+    print(create_token(args.nama_file))
     
     # print(read_grammar("grammar.txt"))
 
-    print(CFG_to_CNF(read_grammar("grammar.txt")))
+    # print(CFG_to_CNF(read_grammar("grammar.txt")))
 
     if CYK_parse(CFG_to_CNF(read_grammar("grammar.txt")), create_token(args.nama_file)):
         print("ACCEPTED")
     else:
         print("SYNTAX ERROR")
+
+    # print(read_grammar("grammar_test.txt"))
+
+    # print(CFG_to_CNF(read_grammar("grammar_test.txt")))
+
+    # file = open(args.nama_file, "r")
+    # if CYK_parse(CFG_to_CNF(read_grammar("grammar_test.txt")), file.read()):
+    #     print("ACCEPTED")
+    # else:
+    #     print("SYNTAX ERROR")
+    # file.close()

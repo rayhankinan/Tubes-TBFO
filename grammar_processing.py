@@ -92,3 +92,9 @@ def is_terminal(string):
 
 def is_variables(string):
     return not is_terminal(string)
+
+# def is_variables(string):
+#     return len(string) > 0 and string[0].isupper()
+
+# def is_terminal(string):
+#     return not is_variables(string)

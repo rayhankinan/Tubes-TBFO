@@ -1,0 +1,21 @@
+S -> a A b B c C d D e E f F g G h H i I j J
+A -> A a
+A -> a
+B -> B b
+B -> b
+C -> C c
+C -> c
+D -> D d
+D -> d
+E -> E e
+E -> e
+F -> F f
+F -> f
+G -> G g
+G -> g
+H -> H h
+H -> h
+I -> I i
+I -> i
+J -> J j
+J -> j
