@@ -9,8 +9,10 @@ if __name__ == "__main__":
     argument_parser.add_argument("nama_file", type=str, help="Nama File yang hendak diparse.")
 
     args = argument_parser.parse_args()
+
+    # print(create_token(args.nama_file))
     
-    print(read_grammar("grammar.txt"))
+    # print(read_grammar("grammar.txt"))
 
     print(CFG_to_CNF(read_grammar("grammar.txt")))
 

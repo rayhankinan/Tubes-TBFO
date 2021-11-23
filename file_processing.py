@@ -137,11 +137,7 @@ def create_token(sentence):
     for token in tokens:
         tokenArray.append(token)
 
-    terminal = ""
-    for i in tokenArray:
-        terminal += f"{i} "
-
-    return terminal
+    return " ".join(tokenArray)
 
 if __name__ == "__main__":
     create_token('test.txt')

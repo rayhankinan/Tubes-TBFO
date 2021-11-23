@@ -1,4 +1,3 @@
-from os import read
 from grammar_processing import is_terminal, is_variables
 
 def CFG_to_CNF(CFG):
