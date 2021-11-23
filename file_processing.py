@@ -91,6 +91,7 @@ token_exp = [
 # teks ke token
 newA = r'[\n]+[ \t]*\'\'\'[(?!(\'\'\'))\w\W]*\'\'\''
 newB = r'[\n]+[ \t]*\"\"\"[(?!(\"\"\"))\w\W]*\"\"\"'
+
 def lexer(teks, token_exp):
     pos = 0 # posisi karakter pada seluruh potongan teks (absolut)
     cur = 1 # posisi karakter relatif terhadap baris tempat dia berada
@@ -112,22 +113,19 @@ def lexer(teks, token_exp):
             regex = re.compile(pattern)
             match = regex.match(teks, pos)
             if match:
-                text = match.group(0)
                 if tag:
                     token = tag
                     tokens.append(token)
                 break
 
         if not match:
-            print()
+            print("SALAH DI FILE PROCESSING")
             print("SYNTAX ERROR")
-            # print("Illegal character %s at line %d and column %d" % (characters[pos], line, cur_pos))
             sys.exit(1)
         else:
             pos = match.end(0)
         cur += 1
     return tokens
-
 
 def create_token(sentence):
     file = open(sentence)
@@ -141,11 +139,9 @@ def create_token(sentence):
 
     terminal = ""
     for i in tokenArray:
-        terminal += str(i) + " "
+        terminal += f"{i} "
 
     return terminal
 
-
 if __name__ == "__main__":
-
     create_token('test.txt')

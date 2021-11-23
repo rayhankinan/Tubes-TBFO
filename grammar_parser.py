@@ -10,13 +10,10 @@ def CYK_parse(CNF, string_input):
                     T[j][j].add(head)
 
         for i in range(j, -1, -1):
-            for k in range(i, j + 1):
+            for k in range(i, j):
                 for head, body in CNF.items():
                     for rule in body:
-                        try:
-                            if len(rule) == 2 and rule[0] in T[i][k] and rule[1] in T[k + 1][j]:
-                                T[i][j].add(head)
-                        except:
-                            pass
+                        if len(rule) == 2 and rule[0] in T[i][k] and rule[1] in T[k + 1][j]:
+                            T[i][j].add(head)
 
     return len(T[0][N - 1]) != 0

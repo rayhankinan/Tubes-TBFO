@@ -24,8 +24,8 @@ def read_grammar(nama_file):
 
     return cfg
 
-def is_variables(string):
-    return string[0].isupper()
-
 def is_terminal(string):
-    return not is_variables(string)
+    return string.startswith("\'") and string.endswith("\'")
+
+def is_variables(string):
+    return not is_terminal(string)
