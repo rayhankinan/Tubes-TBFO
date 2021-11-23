@@ -1,6 +1,0 @@
-if X > 0:
-    print("TES")
-elif X < 0:
-    print("TIS")
-else:
-    print("TOS")
