@@ -1,0 +1,3 @@
+while True:
+    if X > 0:
+        break
