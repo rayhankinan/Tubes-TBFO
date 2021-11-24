@@ -5,6 +5,7 @@ Tugas Besar IF2124 Teori Bahasa Formal dan Otomata Compiler Bahasa Python
 * [General Information](#general-information)
 * [Structures](#structures)
 * [Setup and Usage](#setup-and-usage)
+* [Authors](#authors)
 
 ## General Information
 Dalam proses pembuatan program dari sebuah bahasa menjadi instruksi yang dapat
@@ -29,18 +30,22 @@ SLR, LR(1), dll untuk algoritma yang dapat digunakan untuk melakukan parsing.
 
 ## Structures
 ```bash
-.
-    file.txt
-    file_processing.py
-    grammar.txt
-    grammar_convert.py
-    grammar_parser.py
-    grammar_processing.py
-    parserprogram.py
-    README.md
+file.txt
+file_processing.py
+grammar.txt
+grammar_convert.py
+grammar_parser.py
+grammar_processing.py
+parserprogram.py
+README.md
 ```
 
 ## Setup and Usage
 1. Clone repository ini menggunakan menggunakan command `git clone https://github.com/rayhankinan/Tubes-TBFO.git`.
 2. Ketik source code yang hendak di parsing pada suatu file dengan directory yang sama dengan program `parsingprogram.py`, kemudian save file tersebut.
 3. Jalankan program parsing menggunakan command `py parsingprogram.py <source_code>`.
+
+## Authors
+* [Rayhan Kinan Muhannad - 13520065](https://github.com/rayhankinan)
+* [Samuel Christoper Swandi - 13520075](https://github.com/samuelswandi)
+* [Andhika Arta Aryanto - 13520081](https://github.com/dhikaarta)
