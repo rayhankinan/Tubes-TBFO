@@ -1,3 +1,2 @@
-while True:
-    if X > 0:
-        break
+def f():
+    return g()
