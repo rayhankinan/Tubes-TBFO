@@ -1,2 +1,2 @@
 def f():
-    return g()
+    return 1 + g()
