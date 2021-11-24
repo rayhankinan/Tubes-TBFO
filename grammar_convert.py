@@ -21,32 +21,37 @@ def CFG_to_CNF(CFG):
         CFG = new_rule
 
     # STEP 2: Remove unit productions.
-    unit_productions = {}
+    contain_unit = True
 
-    for head, body in CFG.items():
-        for rule in body:
-            if len(rule) == 1 and is_variables(rule[0]):
-                if head not in unit_productions.keys():
-                    unit_productions[head] = [[rule[0]]]
-                else:
-                    unit_productions[head].append([rule[0]])
-
-    for head_unit, body_unit in unit_productions.items():
-        for rule_unit in body_unit:
-            for head, body in CFG.items():
-                if len(rule_unit) == 1 and head == rule_unit[0]:
-                    new_rule = {head_unit : body}
-                    if head_unit not in CFG.keys():
-                        CFG[head_unit] = body
+    while contain_unit:
+        unit_productions = {}
+        contain_unit = False
+        
+        for head, body in CFG.items():
+            for rule in body:
+                if len(rule) == 1 and is_variables(rule[0]):
+                    contain_unit = True
+                    if head not in unit_productions.keys():
+                        unit_productions[head] = [[rule[0]]]
                     else:
-                        for rule in body:
-                            if rule not in CFG[head_unit]:
-                                CFG[head_unit].append(rule)
+                        unit_productions[head].append([rule[0]])
+
+        for head_unit, body_unit in unit_productions.items():
+            for rule_unit in body_unit:
+                for head, body in CFG.items():
+                    if len(rule_unit) == 1 and head == rule_unit[0]:
+                        new_rule = {head_unit : body}
+                        if head_unit not in CFG.keys():
+                            CFG[head_unit] = body
+                        else:
+                            for rule in body:
+                                if rule not in CFG[head_unit]:
+                                    CFG[head_unit].append(rule)
     
-    for head_unit, body_unit in unit_productions.items():
-        for rule_unit in body_unit:
-            if len(rule_unit) == 1:
-                CFG[head_unit].remove(rule_unit)
+        for head_unit, body_unit in unit_productions.items():
+            for rule_unit in body_unit:
+                if len(rule_unit) == 1:
+                    CFG[head_unit].remove(rule_unit)
 
     # STEP 3: Replace Body with 3 or more Variables
     new_productions = {}
