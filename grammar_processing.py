@@ -1,7 +1,5 @@
 # ATURAN MENULIS GRAMMAR:
 # Head pertama akan menjadi Start Symbol
-# Variables ditulis dengan huruf awal uppercase (untuk precaution juga jangan pake nama "START", "X", "Y", "Z"), sedangkan Terminal harus ditulis huruf awal lowercase
-# Variables yang ditulis pada txt tidak boleh mengandung angka
 # Tidak mengandung Useless Production (tidak terdapat Variables yang tidak dapat diderivasi menjadi string dan tidak terdapat Productions yang tidak muncul pada derivasi string)
 # Tidak mengandung Null Production (tidak terdapat Variables yang menghasilkan epsilon, kecuali pada Start Symbol)
 
