@@ -19,8 +19,8 @@ programmer. Kompilasi ini bertujuan untuk memastikan instruksi yang dibuat oleh 
 mengikuti aturan yang sudah ditentukan oleh bahasa tersebut. Baik bahasa berjenis interpreter
 maupun compiler, keduanya pasti melakukan pemeriksaan sintaks. Perbedaannya terletak
 pada apa yang dilakukan setelah proses pemeriksaan (kompilasi/compile) tersebut selesai
-dilakukan.
-<br/>
+dilakukan.  
+<br />
 Dibutuhkan grammar bahasa dan algoritma parser untuk melakukan kompilasi. Sudah
 sangat banyak grammar dan algoritma yang dikembangkan untuk menghasilkan compiler
 dengan performa yang tinggi. Terdapat CFG, CNF, 2NF, 2LF, dll untuk grammar yang
