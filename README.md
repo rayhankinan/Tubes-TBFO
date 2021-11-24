@@ -7,12 +7,6 @@ Tugas Besar IF2124 Teori Bahasa Formal dan Otomata Compiler Bahasa Python
 * [Setup and Usage](#setup-and-usage)
 
 ## General Information
-Python adalah bahasa interpreter tingkat tinggi (high-level), dan juga general-purpose.
-Python diciptakan oleh Guido van Rossum dan dirilis pertama kali pada tahun 1991. Filosofi
-desain pemrograman Python mengutamakan code readability dengan penggunaan
-whitespace-nya. Python adalah bahasa multiparadigma karena mengimplementasi paradigma
-fungsional, imperatif, berorientasi objek, dan reflektif.
-<br/>
 Dalam proses pembuatan program dari sebuah bahasa menjadi instruksi yang dapat
 dieksekusi oleh mesin, terdapat pemeriksaan sintaks atau kompilasi bahasa yang dibuat oleh
 programmer. Kompilasi ini bertujuan untuk memastikan instruksi yang dibuat oleh programmer
