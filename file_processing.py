@@ -29,6 +29,8 @@ token_exp = [
     # Operator
     (r'\*\*=',                   "POWAS"),
     (r'\*\*',                    "POW"),
+    (r'\/\/=',                   "FLOORDIVAS"),
+    (r'\/\/',                    "FLOORDIV"),
     (r'\*=',                    "MULAS"),
     (r'/=',                     "DIVAS"),
     (r'\+=',                    "SUMAS"),
