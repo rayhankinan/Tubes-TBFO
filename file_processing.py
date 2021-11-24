@@ -125,7 +125,7 @@ def lexer(teks, token_exp):
                 break
 
         if not match:
-            print("SALAH DI FILE PROCESSING")
+            print("ILLEGAL CHARACTER")
             print("SYNTAX ERROR")
             sys.exit(1)
         else:

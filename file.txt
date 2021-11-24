@@ -1,3 +1,2 @@
-if i > 0:
-    if j > 0:
-        print(i, j)
+if not None:
+    print("HELLO WORLD")
